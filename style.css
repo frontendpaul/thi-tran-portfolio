@@ -1,0 +1,16 @@
+:root {
+  --primary: #FFDE00;
+  --primary-text: #FFFFFF;
+  --primary-grey: #D6D6D6;
+  --primary-black: #1D1D1B;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Isidora-Black', sans-serif;
+  font-weight: 900;
+}
