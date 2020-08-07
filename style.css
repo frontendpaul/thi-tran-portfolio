@@ -37,7 +37,7 @@ body {
 /* General classes */
 .btn {
   height: 56px;
-  padding: 0 2rem .2rem;
+  padding: 0 2rem .1rem;
   display: block;
   margin: 0 auto;
   color: var(--primary-text);
@@ -127,15 +127,19 @@ body {
 }
 
 .project-img {
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
   object-fit: contain;
   display: block;
-  margin: 0 auto;
+  margin: auto;
+}
+
+.project-img--small {
+  width: 75%;
+  height: 75%;
 }
 
 .project {
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -144,5 +148,5 @@ body {
 
 .project__title {
   font-size: 2.5rem;
-  margin-bottom: 1rem;
+  margin: 0 0 1rem;
 }
