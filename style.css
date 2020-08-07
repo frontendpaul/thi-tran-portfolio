@@ -5,6 +5,22 @@
   --primary-black: #1D1D1B;
 }
 
+@font-face {
+  font-family: Isidora-Black;
+  src: local("Isidora Black"),
+       local("Isidora-Black"),
+       url("./assets/Isidora-Black.woff2") format("woff2"),
+       url("./assets/Isidora-Black.woff") format("woff");
+}
+
+@font-face {
+  font-family: Isidora-Bold;
+  src: local("Isidora Bold"),
+       local("Isidora-Bold"),
+       url("./assets/Isidora-Bold.woff2") format("woff2"),
+       url("./assets/Isidora-Bold.woff") format("woff");
+}
+
 * {
   box-sizing: border-box;
 }
@@ -12,5 +28,121 @@
 body {
   margin: 0;
   font-family: 'Isidora-Black', sans-serif;
-  font-weight: 900;
+  /* font-size: 200%; */
+  background: var(--primary-black);
+  overflow-x: hidden;
+}
+
+
+/* General classes */
+.btn {
+  height: 56px;
+  padding: 0 2rem .2rem;
+  display: block;
+  margin: 0 auto;
+  color: var(--primary-text);
+  background: transparent;
+  border: 5px solid var(--primary-text);
+  border-radius: 0;
+  font-family: 'Isidora-Black';
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.btn--secondary {
+  color: var(--primary-black);
+  border-color: var(--primary-black);
+}
+
+
+/* Nav bar */
+.nav {
+  width: 100%;
+  height: 76px;
+  display: flex;
+  align-items: center;
+  background: var(--primary-black);
+  box-shadow: 0px 1px 0px #00000029;
+  padding: 0 20px;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+}
+
+.logo__title {
+  color: var(--primary);
+  font-family: 'Isidora-Black', sans-serif;
+  font-size: 1.75rem;
+  line-height: 1;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.menu {
+  display: none;
+}
+
+
+/* Hero */
+.hero {
+  padding-top: 76px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 780px;
+}
+
+.title {
+  color: var(--primary-text);
+  font-family: 'Isidora-Bold';
+  font-size: 3.75rem;
+  line-height: 1.1;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 0.4em;
+}
+
+.hero__img {
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 350px;
+}
+
+
+/* Projects */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.grid__item {
+  height: 100vw;
+  background: var(--primary-text);
+}
+
+.grid__item:nth-last-of-type(odd) {
+  background: var(--primary-black);
+}
+
+.project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.project {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.project__title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
 }
